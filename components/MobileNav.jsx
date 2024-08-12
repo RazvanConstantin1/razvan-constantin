@@ -38,7 +38,7 @@ function MobileNav() {
       </SheetTrigger>
       <SheetContent className="flex flex-col">
         {/* logo */}
-        <div className="mt-32 mb-40 text-center text-2xl">
+        <div className="mt-28 mb-32 text-center text-2xl">
           <Link href="/">
             <h1 className="text-4xl font-semibold">
               Razvan <span className="text-accent">.</span>

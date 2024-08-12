@@ -28,10 +28,10 @@ const Photo = () => {
               ease: "easeInOut",
             },
           }}
-          className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] absolute ml-4"
+          className="w-[250px] h-[250px] xl:w-[400px] xl:h-[400px] absolute ml-6 mt-6 xl:ml-6 xl:mt-6"
         >
           <Image
-            src="/assets/razvanbgphoto.png"
+            src="/assets/razvanbgphoto1.png"
             priority
             quality={100}
             fill
@@ -42,9 +42,9 @@ const Photo = () => {
 
         {/* circle */}
         <motion.svg
-          className="w-[300px] xl:w-[506px] h-[300px] xl:h-[506px] "
+          className="w-[300px] xl:w-[450px] h-[300px] xl:h-[450px] "
           fill="transparent"
-          viewBox="0 0 500 500"
+          viewBox="0 0 510 510"
           xmlns="http://www.w3.org/2000/svg"
         >
           <motion.circle
