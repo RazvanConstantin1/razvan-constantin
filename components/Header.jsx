@@ -3,6 +3,7 @@ import { Button } from "./ui/button.jsx";
 
 // components
 import Nav from "./Nav.jsx";
+import MobileNav from "./MobileNav.jsx";
 
 function Header() {
   return (
@@ -24,7 +25,9 @@ function Header() {
         </div>
 
         {/* mobile nav */}
-        <div className="xl:hidden">mobile nav</div>
+        <div className="xl:hidden">
+          <MobileNav />
+        </div>
       </div>
     </header>
   );
