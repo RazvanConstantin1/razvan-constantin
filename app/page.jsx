@@ -13,14 +13,16 @@ function Home() {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* text */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span>Software Developer</span>
+            <span>Frontend Developer</span>
             <h1 className="h1 mb-6">
               Hello I'm <br />{" "}
               <span className="text-accent">Razvan Constantin</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I excel at crafting elegant digital experiences and I am
-              proeficient in various programming languages and technologies.
+              I build and optimize user interfaces for web applications,
+              ensuring they are both visually appealing and functional. I
+              translate designs into code and focus on delivering an exceptional
+              user experience.
             </p>
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
