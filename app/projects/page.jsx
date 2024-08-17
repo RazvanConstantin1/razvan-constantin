@@ -22,32 +22,40 @@ import ProjectSliderBtns from "@/components/ui/ProjectSliderBtns.jsx";
 const projects = [
   {
     num: "01",
-    category: "frontend",
+    category: "ANNA",
     title: "project 1",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis saepe expedita, vitae minus, ipsum tenetur inventore cumque libero recusandae unde dignissimos aperiam perferendis! Expedita ratione, culpa quis omnis id quam.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png",
-    live: "",
-    github: "",
+      "Landing page for a hairstyling and make-up salon, designed to offer users an engaging and user-friendly experience. It features a main page showcasing the salon's services, high-quality images of hairstyles and make-up, and client testimonials. Additionally, a simulated online store allows users to browse and add beauty products to a cart, mimicking the online shopping experience.",
+    stack: [
+      { name: "Html 5" },
+      { name: "Css 3" },
+      { name: "Vanilla Javascript" },
+    ],
+    image: "/assets/work/Anna.png",
+    live: "https://razvanconstantin1.github.io/ANNA-Hairstylist-Makeup-Artist/",
+    github:
+      "https://github.com/RazvanConstantin1/ANNA-Hairstylist-Makeup-Artist",
   },
   {
     num: "02",
-    category: "frontend",
+    category: "BrizzBar",
     title: "project 2",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis saepe expedita, vitae minus, ipsum tenetur inventore cumque libero recusandae unde dignissimos aperiam perferendis! Expedita ratione, culpa quis omnis id quam.",
-    stack: [{ name: "React" }, { name: "Tailwind Css" }, { name: "Framer" }],
-    image: "/assets/work/thumb2.png",
-    live: "",
-    github: "",
+      "The project is a landing page for a local restaurant, built with React and enhanced with dynamic animations using Framer Motion. It highlights the restaurant's menu and atmosphere, creating an interactive and visually appealing experience for users. The animations add a modern touch, making the browsing experience smooth and engaging.",
+    stack: [
+      { name: "React" },
+      { name: "Tailwind Css" },
+      { name: "Framer Motion" },
+    ],
+    image: "/assets/work/BrizzBar.png",
+    live: "https://razvanconstantin1.github.io/brizz-bar-restaurant/",
+    github: "https://github.com/RazvanConstantin1/brizz-bar-restaurant",
   },
   {
     num: "03",
-    category: "frontend",
+    category: "Work in progress",
     title: "project 3",
-    description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis saepe expedita, vitae minus, ipsum tenetur inventore cumque libero recusandae unde dignissimos aperiam perferendis! Expedita ratione, culpa quis omnis id quam.",
+    description: "More projects to come soon ...",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
     image: "/assets/work/thumb3.png",
     live: "",
@@ -110,7 +118,7 @@ function Projects() {
               {/* buttons */}
               <div className="flex items-center gap-4">
                 {/* live project button */}
-                <Link href={project.github}>
+                <Link href={project.live}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center">
@@ -123,7 +131,7 @@ function Projects() {
                   </TooltipProvider>
                 </Link>
                 {/* github project button */}
-                <Link href={project.live}>
+                <Link href={project.github}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center">
@@ -148,7 +156,7 @@ function Projects() {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative flex justify-center items-center bg-pink-50/20">
+                    <div className="h-[460px] relative flex justify-center items-center bg-primary">
                       {/* overlay */}
                       <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                       {/* image */}

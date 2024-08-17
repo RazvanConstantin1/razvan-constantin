@@ -14,7 +14,7 @@ import { TbBrandFramerMotion } from "react-icons/tb";
 const about = {
   title: "About me",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora rerum iste quos rem, commodi placeat ratione nemo voluptates aliquid, a, possimus voluptatum harum saepe officia aut veritatis culpa. Accusantium, a?",
+    "I’m a frontend developer with a passion for continuous learning and a keen sense of humor. I’m also energetic and curious, always eager to explore new technologies and ideas. Outside of work, I have a deep interest in cars and enjoy keeping up with the latest automotive trends.",
   info: [
     {
       fieldName: "Name",
@@ -44,7 +44,7 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
-    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci facere omnis aut laboriosam aliquid possimus inventore praesentium corrupti quasi nulla obcaecati voluptatem odit saepe, cupiditate hic deleniti maiores alias magnam.",
+    "I’m a frontend developer at the beginning of my career, having completed an intensive bootcamp at IT School, accredited by the Romanian Ministry of Education. This program provided me with a strong foundation in web development. I've also taken several online courses to further expand my skills.",
   items: [
     {
       institution:
@@ -74,7 +74,7 @@ const education = {
 const skills = {
   title: "My Skills",
   description:
-    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci facere omnis aut laboriosam aliquid possimus inventore praesentium corrupti quasi nulla obcaecati voluptatem odit saepe, cupiditate hic deleniti maiores alias magnam.",
+    "I have a strong grasp of HTML and CSS for designing clean, responsive layouts. My expertise extends to JavaScript and TypeScript for building dynamic, interactive features. I leverage React to develop modern user interfaces and use Tailwind CSS for efficient styling. For state management, I rely on Redux, and I utilize Next.js to create SEO-friendly applications. Additionally, I use Framer Motion to create engaging animations that enhance the user experience.",
   skillList: [
     {
       icon: <FaHtml5 />,
