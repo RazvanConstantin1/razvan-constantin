@@ -53,8 +53,23 @@ const projects = [
   },
   {
     num: "03",
-    category: "Work in progress",
+    category: "HomezZ",
     title: "project 3",
+    description:
+      "This project simulates a complete online shopping experience. Developed with React and powered by Vite, the project delivers a fast and smooth user interface, allowing visitors to explore a wide range of furniture products. With the help of Redux Toolkit, I efficiently managed state across the application, enabling features with real-time updates.",
+    stack: [
+      { name: "React + Vite" },
+      { name: "Tailwind Css" },
+      { name: "Redux ToolKit" },
+    ],
+    image: "/assets/work/HomezZ.png",
+    live: "https://homezz-sage.vercel.app/",
+    github: "https://github.com/RazvanConstantin1/homezz",
+  },
+  {
+    num: "04",
+    category: "Work in progress",
+    title: "project 4",
     description: "More projects to come soon ...",
     stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
     image: "/assets/work/Workinprogress.jpg",
