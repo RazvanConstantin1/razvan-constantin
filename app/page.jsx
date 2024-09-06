@@ -27,7 +27,7 @@ function Home() {
             {/* btn and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <a
-                href="https://drive.google.com/file/d/1fWH2jGIapos15TSlSKpUq4wpzZWBNPRd/view?usp=sharing"
+                href="https://drive.google.com/file/d/1IkRkkqcr7_qTkEcmQ4KvqqqwCLl4QMMs/view?usp=sharing"
                 target="_blank"
               >
                 <Button
