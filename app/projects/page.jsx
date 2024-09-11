@@ -172,19 +172,22 @@ function Projects() {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative flex justify-center items-center bg-primary">
-                      {/* overlay */}
-                      <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-                      {/* image */}
-                      <div>
-                        <Image
-                          src={project.image}
-                          fill
-                          className="object-cover"
-                          alt="project"
-                        />
+                    <Link href={project.live} target="_blank">
+                      <div className="h-[460px] relative flex justify-center items-center bg-primary">
+                        {/* overlay */}
+                        <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                        {/* image */}
+
+                        <div>
+                          <Image
+                            src={project.image}
+                            fill
+                            className="object-cover"
+                            alt="project"
+                          />
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   </SwiperSlide>
                 );
               })}
