@@ -22,19 +22,18 @@ import ProjectSliderBtns from "@/components/ui/ProjectSliderBtns.jsx";
 const projects = [
   {
     num: "01",
-    category: "ANNA",
+    category: "HomezZ",
     title: "project 1",
     description:
-      "Landing page for a hairstyling and make-up salon, designed to offer users an engaging and user-friendly experience. It features a main page showcasing the salon's services, high-quality images of hairstyles and make-up, and client testimonials. Additionally, a simulated online store allows users to browse and add beauty products to a cart, mimicking the online shopping experience.",
+      "This project simulates a complete online shopping experience. Developed with React and powered by Vite, the project delivers a fast and smooth user interface, allowing visitors to explore a wide range of furniture products. With the help of Redux Toolkit, I efficiently managed state across the application, enabling features with real-time updates.",
     stack: [
-      { name: "Html 5" },
-      { name: "Css 3" },
-      { name: "Vanilla Javascript" },
+      { name: "React + Vite" },
+      { name: "Tailwind Css" },
+      { name: "Redux ToolKit" },
     ],
-    image: "/assets/work/Anna.png",
-    live: "https://razvanconstantin1.github.io/ANNA-Hairstylist-Makeup-Artist/",
-    github:
-      "https://github.com/RazvanConstantin1/ANNA-Hairstylist-Makeup-Artist",
+    image: "/assets/work/HomezZ.png",
+    live: "https://homezz-sage.vercel.app/",
+    github: "https://github.com/RazvanConstantin1/homezz",
   },
   {
     num: "02",
@@ -53,19 +52,21 @@ const projects = [
   },
   {
     num: "03",
-    category: "HomezZ",
+    category: "ANNA",
     title: "project 3",
     description:
-      "This project simulates a complete online shopping experience. Developed with React and powered by Vite, the project delivers a fast and smooth user interface, allowing visitors to explore a wide range of furniture products. With the help of Redux Toolkit, I efficiently managed state across the application, enabling features with real-time updates.",
+      "Landing page for a hairstyling and make-up salon, designed to offer users an engaging and user-friendly experience. It features a main page showcasing the salon's services, high-quality images of hairstyles and make-up, and client testimonials. Additionally, a simulated online store allows users to browse and add beauty products to a cart, mimicking the online shopping experience.",
     stack: [
-      { name: "React + Vite" },
-      { name: "Tailwind Css" },
-      { name: "Redux ToolKit" },
+      { name: "Html 5" },
+      { name: "Css 3" },
+      { name: "Vanilla Javascript" },
     ],
-    image: "/assets/work/HomezZ.png",
-    live: "https://homezz-sage.vercel.app/",
-    github: "https://github.com/RazvanConstantin1/homezz",
+    image: "/assets/work/Anna.png",
+    live: "https://razvanconstantin1.github.io/ANNA-Hairstylist-Makeup-Artist/",
+    github:
+      "https://github.com/RazvanConstantin1/ANNA-Hairstylist-Makeup-Artist",
   },
+
   {
     num: "04",
     category: "Work in progress",
