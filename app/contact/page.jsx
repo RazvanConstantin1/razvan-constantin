@@ -6,18 +6,20 @@ const info = [
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    description: "(+40) 0724 803 252",
+    description1: "RO: (+40) 724 803 252",
+    description2: "CH: (+41) 765 223 412",
   },
   {
     icon: <FaEnvelope />,
     title: "Email",
     description: "razvanconstantin1097@gmail.com",
   },
-  // {
-  //   icon: <FaMapMarkerAlt />,
-  //   title: "Address",
-  //   description: "Nürensdorf, Switzerland",
-  // },
+  {
+    icon: <FaMapMarkerAlt />,
+    title: "Address",
+    description1: "Bucharest, Romania",
+    description2: "Nürensdorf, Switzerland",
+  },
 ];
 
 function Contact() {
@@ -38,6 +40,7 @@ function Contact() {
         <div className="flex items-center justify-center">
           <ul className="flex flex-col gap-10 mt-12">
             {info.map((item, index) => {
+              console.log(item.title);
               return (
                 <li
                   key={index}
@@ -50,6 +53,8 @@ function Contact() {
                     <p className="text-white/60">{item.title}</p>
                   </div>
                   <h3 className="text-xl">{item.description}</h3>
+                  <h3 className="text-xl">{item.description1}</h3>
+                  <h3 className="text-xl">{item.description2}</h3>
                 </li>
               );
             })}
