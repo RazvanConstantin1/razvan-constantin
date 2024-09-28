@@ -1,23 +1,11 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
-import React, { useState } from "react";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-
 import Link from "next/link";
-import Image from "next/image.js";
-import ProjectSliderBtns from "@/components/ui/ProjectSliderBtns.jsx";
 
 const projects = [
   {
@@ -56,40 +44,40 @@ const projects = [
     title: "project 3",
     description:
       "Landing page for a hairstyling and make-up salon, designed to offer users an engaging and user-friendly experience. It features a main page showcasing the salon's services, high-quality images of hairstyles and make-up, and client testimonials. Additionally, a simulated online store allows users to browse and add beauty products to a cart, mimicking the online shopping experience.",
-    stack: [
-      { name: "Html 5" },
-      { name: "Css 3" },
-      { name: "Vanilla Javascript" },
-    ],
+    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
     image: "/assets/work/Anna.png",
     live: "https://razvanconstantin1.github.io/ANNA-Hairstylist-Makeup-Artist/",
     github:
       "https://github.com/RazvanConstantin1/ANNA-Hairstylist-Makeup-Artist",
   },
+];
 
+const projectApps = [
   {
-    num: "04",
-    category: "Work in progress",
-    title: "project 4",
-    description: "More projects to come soon ...",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/Workinprogress.jpg",
-    live: "",
-    github: "",
+    num: "01",
+    category: "Split Bill",
+    title: "project 2",
+    description:
+      "This is a React application designed to help you simplify the process of splitting bills. Add friends with names and photos, then use the bill calculator to input expenses and determine how much each person owes, based on who paid. It simplifies tracking and settling shared expenses.",
+    stack: [{ name: "React" }],
+    image: "/assets/work/bill-split.png",
+    live: "https://razvanconstantin1.github.io/split-bill/",
+    github: "https://github.com/RazvanConstantin1/split-bill",
+  },
+  {
+    num: "02",
+    category: "Airplane Mode",
+    title: "project 2",
+    description:
+      "When you go to a vacation you got that weird feeling that you forgot something? So do I, so I made a small React app which lets you add items, mark them as packed, and delete them from a customizable list. You can sort by input order, packed status, or alphabetically, and the list is saved in local storage for easy access after refreshing the page",
+    stack: [{ name: "React" }],
+    image: "/assets/work/airplane-mode.png",
+    live: "https://razvanconstantin1.github.io/airplane-mode/",
+    github: "https://github.com/RazvanConstantin1/airplane-mode",
   },
 ];
 
 function Projects() {
-  const [project, setProject] = useState(projects[0]);
-
-  const handleSlideChange = (swiper) => {
-    // get current slide index
-    const currentIndex = swiper.activeIndex;
-
-    // update project state base on current slide index
-    setProject(projects[currentIndex]);
-  };
-
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -101,103 +89,152 @@ function Projects() {
           ease: "easeIn",
         },
       }}
-      className="min-h-[80vh] flex flex-col justify-center py12 xl:px-0"
+      className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
     >
       <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-          <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-            <div className="flex flex-col gap-[30px] h-[50%]">
-              {/* outline num */}
-              <div className="text-8xl leading-none font-extrabold text-accent">
-                {project.num}
-              </div>
-              {/* project category */}
-              <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.category} project
-              </h2>
-              {/* project description */}
-              <p className="text-white/60">{project.description}</p>
-              {/* stack */}
-              <ul className="flex gap-4">
-                {project.stack.map((item, index) => {
-                  return (
-                    <li key={index} className="text-xl text-accent">
-                      {item.name}
-                      {/* remove the las comma */}
-                      {index !== project.stack.length - 1 && ","}
-                    </li>
-                  );
-                })}
-              </ul>
-              {/* border */}
-              <div className="border border-white/20"></div>
-              {/* buttons */}
-              <div className="flex items-center gap-4">
-                {/* live project button */}
-                <Link href={project.live}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Live Project</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
-                {/* github project button */}
-                <Link href={project.github}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center">
-                        <BsGithub className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Github repository</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="w-full xl:w-[50%]">
-            <Swiper
-              spaceBetween={30}
-              slidesPreview={1}
-              className="xl:h-[520px] mb-12"
-              onSlideChange={handleSlideChange}
-            >
-              {projects.map((project, index) => {
-                return (
-                  <SwiperSlide key={index} className="w-full">
-                    <Link href={project.live} target="_blank">
-                      <div className="h-[460px] relative flex justify-center items-center bg-primary">
-                        {/* overlay */}
-                        <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-                        {/* image */}
+        <div className="flex flex-col justify-center items-center gap-4 ">
+          <h3 className="text-3xl w-full text-center pb-2">Websites</h3>
+          {projects.map((project, index) => {
+            // check for odd number to dinamically display project divs on the page
+            const isOdd = index % 2 === 0;
 
+            return (
+              <div
+                className="flex flex-col xl:gap-12 xl:flex-row items-start border border-accent rounded-lg px-2 xl:p-4"
+                key={index}
+              >
+                <div
+                  className={`${
+                    isOdd ? "xl:order-none" : "order-2"
+                  } w-full xl:w-[50%] xl:h-[500px] flex flex-col xl:justify-between order-2`}
+                >
+                  <div
+                    className={`${
+                      isOdd ? "xl:items-start" : "xl:items-end"
+                    } flex flex-col h-[50%] items-center`}
+                  >
+                    <span className="text-6xl font-extrabold text-accent">
+                      {project.num}
+                    </span>
+                    <h2 className="text-[42px] font-bold text-white">
+                      {project.category}
+                    </h2>
+                    <p className="text-white/70 mb-4 leading-6 xl:leading-8">
+                      {project.description}
+                    </p>
+                    <ul className="flex gap-4 mb-2">
+                      {project.stack.map((stack, index) => (
+                        <li key={index} className="text-xl text-accent">
+                          {stack.name}
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="border border-white/20"></div>
+                  </div>
+                  <div
+                    className={`${
+                      isOdd ? "justify-start" : "justify-end"
+                    } flex  items-center gap-2 p-4`}
+                  >
+                    <Link href={project.live} target="_blank">
+                      <button className="flex justify-center items-center sm:gap-2 bg-accent hover:bg-accent-hover rounded-full xl:px-4 xl:py-2 px-2 py-[1px] text-primary leading-6">
                         <div>
-                          <Image
-                            src={project.image}
-                            fill
-                            className="object-cover"
-                            alt="project"
-                          />
+                          <BsArrowUpRight className="size-6" />
                         </div>
-                      </div>
+                        <span>Live Preview</span>
+                      </button>
                     </Link>
-                  </SwiperSlide>
-                );
-              })}
-              {/* slider buttons */}
-              <ProjectSliderBtns
-                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
-                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
-              />
-            </Swiper>
-          </div>
+                    <Link href={project.github} target="_blank">
+                      <button className="flex justify-center items-center sm:gap-2 bg-white/85 hover:bg-white rounded-full xl:px-4 xl:py-2 px-2 py-[2px] text-primary leading-6">
+                        <div>
+                          <BsGithub className="size-6" />
+                        </div>
+                        <span>GitHub Repository</span>
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+                <div className="flex justify-center items-center w-full xl:w-[480px] p-4">
+                  <Link href={project.live} target="_blank">
+                    <img src={project.image} alt="project img" />
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
+
+          <h3 className="text-3xl w-full text-center pb-2 mt-4">
+            Web Applications
+          </h3>
+
+          {projectApps.map((project, index) => {
+            // check for odd number to dinamically display project divs on the page
+            const isOdd = index % 2 === 0;
+
+            return (
+              <div
+                className="flex flex-col xl:gap-12 xl:flex-row items-start border border-accent rounded-lg px-2 xl:p-4"
+                key={index}
+              >
+                <div
+                  className={`${
+                    isOdd ? "xl:order-none" : "order-2"
+                  } w-full xl:w-[50%] xl:h-[500px] flex flex-col xl:justify-between order-2`}
+                >
+                  <div
+                    className={`${
+                      isOdd ? "xl:items-start" : "xl:items-end"
+                    } flex flex-col h-[50%] items-center`}
+                  >
+                    <span className="text-6xl font-extrabold text-accent">
+                      {project.num}
+                    </span>
+                    <h2 className="text-[42px] font-bold text-white">
+                      {project.category}
+                    </h2>
+                    <p className="text-white/70 mb-4 leading-6 xl:leading-8">
+                      {project.description}
+                    </p>
+                    <ul className="flex gap-4 mb-4">
+                      {project.stack.map((stack, index) => (
+                        <li key={index} className="text-xl text-accent">
+                          {stack.name}
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="border border-white/20"></div>
+                  </div>
+                  <div
+                    className={`${
+                      isOdd ? "justify-start" : "justify-end"
+                    } flex  items-center gap-2 p-4`}
+                  >
+                    <Link href={project.live} target="_blank">
+                      <button className="flex justify-center items-center sm:gap-2 bg-accent hover:bg-accent-hover rounded-full xl:px-4 xl:py-2 px-2 py-[1px] text-primary leading-6">
+                        <div>
+                          <BsArrowUpRight className="size-6" />
+                        </div>
+                        <span>Live Preview</span>
+                      </button>
+                    </Link>
+                    <Link href={project.github} target="_blank">
+                      <button className="flex justify-center items-center sm:gap-2 bg-white/85 hover:bg-white rounded-full xl:px-4 xl:py-2 px-2 py-[2px] text-primary leading-6">
+                        <div>
+                          <BsGithub className="size-6" />
+                        </div>
+                        <span>GitHub Repository</span>
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+                <div className="flex justify-center items-center w-full xl:w-[480px] p-4">
+                  <Link href={project.live} target="_blank">
+                    <img src={project.image} alt="project img" />
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </motion.section>

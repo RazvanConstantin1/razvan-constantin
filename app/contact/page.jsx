@@ -6,18 +6,18 @@ const info = [
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    description: "(+41) 0765 223 412",
+    description: "(+40) 0724 803 252",
   },
   {
     icon: <FaEnvelope />,
     title: "Email",
     description: "razvanconstantin1097@gmail.com",
   },
-  {
-    icon: <FaMapMarkerAlt />,
-    title: "Address",
-    description: "Nürensdorf, Switzerland",
-  },
+  // {
+  //   icon: <FaMapMarkerAlt />,
+  //   title: "Address",
+  //   description: "Nürensdorf, Switzerland",
+  // },
 ];
 
 function Contact() {
