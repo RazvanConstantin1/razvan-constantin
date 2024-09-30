@@ -55,6 +55,17 @@ const projects = [
 const projectApps = [
   {
     num: "01",
+    category: "Popcorn Time",
+    title: "project 1",
+    description:
+      "Popcorn Time is a React app using the OMDb API for movie and series search. Users can view detailed info, rate movies (1-10), and add them to their watched list.Local storage ensures ratings and the list persist across sessions. The app uses async API calls and React hooks for smooth state management.",
+    stack: [{ name: "React" }, { name: "API Call" }],
+    image: "/assets/work/popcorn-time.png",
+    live: "https://razvanconstantin1.github.io/popcorn-time/",
+    github: "https://github.com/RazvanConstantin1/popcorn-time",
+  },
+  {
+    num: "02",
     category: "Split Bill",
     title: "project 2",
     description:
@@ -65,9 +76,9 @@ const projectApps = [
     github: "https://github.com/RazvanConstantin1/split-bill",
   },
   {
-    num: "02",
+    num: "03",
     category: "Airplane Mode",
-    title: "project 2",
+    title: "project 3",
     description:
       "When you go to a vacation you got that weird feeling that you forgot something? So do I, so I made a small React app which lets you add items, mark them as packed, and delete them from a customizable list. You can sort by input order, packed status, or alphabetically, and the list is saved in local storage for easy access after refreshing the page",
     stack: [{ name: "React" }],
