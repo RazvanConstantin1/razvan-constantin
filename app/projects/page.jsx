@@ -55,8 +55,23 @@ const projects = [
 const projectApps = [
   {
     num: "01",
-    category: "Popcorn Time",
+    category: "Slice&Dice",
     title: "project 1",
+    description:
+      "A pizza ordering app built with React and Redux Toolkit. Users can browse the menu, manage the cart, place orders with geolocation or manual input, and track them using a unique ID. The app supports prioritized orders, displays order summaries, and offers real-time cost and delivery estimates.",
+    stack: [
+      { name: "React" },
+      { name: "React Router" },
+      { name: "Redux ToolKit" },
+    ],
+    image: "/assets/work/SliceNDice.png",
+    live: "https://slice-n-dice.vercel.app/",
+    github: "https://github.com/RazvanConstantin1/slice-n-dice",
+  },
+  {
+    num: "02",
+    category: "Popcorn Time",
+    title: "project 2",
     description:
       "Popcorn Time is a React app using the OMDb API for movie and series search. Users can view detailed info, rate movies (1-10), and add them to their watched list.Local storage ensures ratings and the list persist across sessions. The app uses async API calls and React hooks for smooth state management.",
     stack: [{ name: "React" }, { name: "API Call" }],
@@ -65,9 +80,9 @@ const projectApps = [
     github: "https://github.com/RazvanConstantin1/popcorn-time",
   },
   {
-    num: "02",
+    num: "03",
     category: "Split Bill",
-    title: "project 2",
+    title: "project 3",
     description:
       "This is a React application designed to help you simplify the process of splitting bills. Add friends with names and photos, then use the bill calculator to input expenses and determine how much each person owes, based on who paid. It simplifies tracking and settling shared expenses.",
     stack: [{ name: "React" }],
@@ -76,9 +91,9 @@ const projectApps = [
     github: "https://github.com/RazvanConstantin1/split-bill",
   },
   {
-    num: "03",
+    num: "04",
     category: "Airplane Mode",
-    title: "project 3",
+    title: "project 4",
     description:
       "When you go to a vacation you got that weird feeling that you forgot something? So do I, so I made a small React app which lets you add items, mark them as packed, and delete them from a customizable list. You can sort by input order, packed status, or alphabetically, and the list is saved in local storage for easy access after refreshing the page",
     stack: [{ name: "React" }],

@@ -6,8 +6,7 @@ const info = [
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    description1: "RO: (+40) 724 803 252",
-    description2: "CH: (+41) 765 223 412",
+    description: "RO: (+40) 724 803 252",
   },
   {
     icon: <FaEnvelope />,
@@ -17,8 +16,7 @@ const info = [
   {
     icon: <FaMapMarkerAlt />,
     title: "Address",
-    description1: "Bucharest, Romania",
-    description2: "Nürensdorf, Switzerland",
+    description: "Bucharest, Romania",
   },
 ];
 
@@ -53,8 +51,6 @@ function Contact() {
                     <p className="text-white/60">{item.title}</p>
                   </div>
                   <h3 className="text-xl">{item.description}</h3>
-                  <h3 className="text-xl">{item.description1}</h3>
-                  <h3 className="text-xl">{item.description2}</h3>
                 </li>
               );
             })}
