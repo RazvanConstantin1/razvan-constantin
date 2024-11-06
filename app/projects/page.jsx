@@ -70,8 +70,19 @@ const projectApps = [
   },
   {
     num: "02",
-    category: "Popcorn Time",
+    category: "Wild Oasis App",
     title: "project 2",
+    description:
+      "This is a staff management app for cabin rentals using React, React Query, and Supabase. The app features a dashboard for reservation stats, allows staff to add, edit, or delete cabins, create new employee accounts, and is secured by a login portal. It streamlines rental and staff management efficiently and securely. Login: test@test.com 12345678",
+    stack: [{ name: "React" }, { name: "React Query" }, { name: "Supabase" }],
+    image: "/assets/work/WildOasisApp.png",
+    live: "https://wild-oasis-app-phi.vercel.app",
+    github: "https://github.com/RazvanConstantin1/wild-oasis-app",
+  },
+  {
+    num: "03",
+    category: "Popcorn Time",
+    title: "project 3",
     description:
       "Popcorn Time is a React app using the OMDb API for movie and series search. Users can view detailed info, rate movies (1-10), and add them to their watched list.Local storage ensures ratings and the list persist across sessions. The app uses async API calls and React hooks for smooth state management.",
     stack: [{ name: "React" }, { name: "API Call" }],
@@ -80,9 +91,9 @@ const projectApps = [
     github: "https://github.com/RazvanConstantin1/popcorn-time",
   },
   {
-    num: "03",
+    num: "04",
     category: "Split Bill",
-    title: "project 3",
+    title: "project 4",
     description:
       "This is a React application designed to help you simplify the process of splitting bills. Add friends with names and photos, then use the bill calculator to input expenses and determine how much each person owes, based on who paid. It simplifies tracking and settling shared expenses.",
     stack: [{ name: "React" }],
@@ -91,9 +102,9 @@ const projectApps = [
     github: "https://github.com/RazvanConstantin1/split-bill",
   },
   {
-    num: "04",
+    num: "05",
     category: "Airplane Mode",
-    title: "project 4",
+    title: "project 5",
     description:
       "When you go to a vacation you got that weird feeling that you forgot something? So do I, so I made a small React app which lets you add items, mark them as packed, and delete them from a customizable list. You can sort by input order, packed status, or alphabetically, and the list is saved in local storage for easy access after refreshing the page",
     stack: [{ name: "React" }],
